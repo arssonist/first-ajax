@@ -13,12 +13,15 @@ $(document).ready(function () {
   $('#cc').click(function() {
 
     $.ajax({
-      url: 'http://first-ajax-api.herokuapp.com/pong/',
+      url: 'http://first-ajax-api.herokuapp.com/ping/',
       method: 'get',
       data: {},
       dataType:'text'
+    }).done(function(responseData){
+       $('section').append(responseData);
+     }).fail(function(){      $('#step3456').append("sorry")
     }).always(function(){
-      console.log("Hey the request is finshed")
+      $('#step3456').append("So")
     });
   });
 });
