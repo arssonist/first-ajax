@@ -24,4 +24,16 @@ $(document).ready(function () {
       $('#step3456').append("So")
     });
   });
+
+  $('#dd').click(function(){
+
+    $.ajax({
+      url:'http://first-ajax-api.herokuapp.com/count/',
+      method:'get',
+      data:{},
+      dataType:'text'
+    }).done(function(responseData){
+      $('#step7').append(responseData);
+    })
+  })
 });
