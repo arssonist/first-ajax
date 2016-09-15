@@ -17,6 +17,9 @@ $(document).ready(function () {
       method: 'get',
       data: {},
       dataType:'text'
-    })
-  })
+    }).done(function(data){
+      console.log(data)
+      $(data).append('section');
+    });
+  });
 });
