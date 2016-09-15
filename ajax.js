@@ -17,8 +17,8 @@ $(document).ready(function () {
       method: 'get',
       data: {},
       dataType:'text'
-    }).fail(function(){
-      $('#step3456').append("jhcbekjve")
+    }).always(function(){
+      console.log("Hey the request is finshed")
     });
   });
 });
