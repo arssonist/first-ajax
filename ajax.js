@@ -36,4 +36,26 @@ $(document).ready(function () {
       $('#step7').append(responseData);
     })
   })
+  $('#ee').click(function(){
+
+    $.ajax({
+      url:'http://first-ajax-api.herokuapp.com/time/',
+      method:'get',
+      data:{timezone:'Europe/Sofia', timezone:'America/Mexico_City'},
+      dataType:'text'
+    }).done(function(responseData){
+      $('#step8').append(responseData);
+    })
+  })
+  $('#ff').click(function(){
+
+    $.ajax({
+    url:'http://first-ajax-api.herokuapp.com/a_car/',
+    method:'get',
+    data:{},
+    dataType:'html'
+  }).done(function(responseData){
+    $('#list').append(responseData);
+  })
+  });
 });
